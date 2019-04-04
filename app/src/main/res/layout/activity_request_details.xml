@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RequestDetails">
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/layout_rel1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+
+
+            <TextView
+                android:id="@+id/text_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:text="Fill Details"
+                android:textSize="25sp"
+                />
+            <EditText
+                android:id="@+id/typeofemergency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_title"
+                android:layout_marginTop="30dp"
+                android:hint="Type of Emergency eg: Accident, Fire"
+                android:inputType="text"/>
+
+            <EditText
+                android:id="@+id/scaleofemergency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/typeofemergency"
+                android:layout_marginTop="30dp"
+                android:hint="Number of Vehicles Required eg: 2, 5"
+                android:inputType="number"/>
+
+            <EditText
+                android:id="@+id/phoneno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/scaleofemergency"
+                android:layout_marginTop="30dp"
+                android:hint="Enter phone no"
+                android:inputType="phone"/>
+
+            <Button
+                android:id="@+id/btn_send_request"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phoneno"
+                android:layout_marginTop="35dp"
+                android:text="Send"
+                />
+
+            <Button
+                android:id="@+id/btn_send_sms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_below="@+id/btn_send_request"
+                android:layout_marginLeft="150dp"
+                android:text="Send SMS"
+                android:onClick="SendSMS"/>
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="400dp"
+        android:visibility="invisible" />
+
+</RelativeLayout>
